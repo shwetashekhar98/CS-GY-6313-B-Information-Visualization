@@ -58,7 +58,7 @@ Lecture notes provide theoretical foundations and practical tips for creating ef
 - **[Lecture 8: Interaction and Animation](./Lectures/lec8_10_24.pdf)**  
   Building interactive and animated visualizations.  
 
-- **[Lecture 9: Uncertainty and Misinformation](Lecture PPT/lec9_10_31_uncertainty_misinfo1-compressed.pdf)**  
+- **[Lecture 9: Uncertainty and Misinformation](./Lecture PPT/lec9_10_31_uncertainty_misinfo1-compressed.pdf)**  
   Handling ambiguity and ethical considerations in visualization.  
 
 - **[Lecture 10: Storytelling in Visualization](./Lectures/lec10_11_13.pptx)**  
