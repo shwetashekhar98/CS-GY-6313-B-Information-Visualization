@@ -21,17 +21,6 @@ Each assignment folder includes a PDF with the problem statement and relevant so
 - **[Assignment 4: Advocacy Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Assignment4)**  
   - Focus: Storytelling and persuasive visualizations for social change.  
 
-### **Solutions**
-Solution files include SQL scripts, Python code, and visualizations created for each assignment.  
-
-- **Assignment 1 Solutions:** [Solution 1](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Solutions/solution1.sql)  
-- **Assignment 2 Solutions:**  
-  - [Option 1](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Solutions/option1.sql)  
-  - [Option 2](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Solutions/option2.sql)  
-- **Assignment 3 Solutions:** [Solution 3](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Solutions/solution3.sql)  
-- **Assignment 4 Solutions:** [Solution 4](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Solutions/solution4.sql)  
-
----
 
 ## Lecture Notes
 Lecture notes provide theoretical foundations and practical tips for creating effective visualizations.  
