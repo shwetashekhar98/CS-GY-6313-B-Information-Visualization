@@ -25,7 +25,7 @@ Each assignment folder includes a PDF with the problem statement and relevant so
 ## Lecture Notes
 Lecture notes provide theoretical foundations and practical tips for creating effective visualizations.  
 
-- **[Lecture 1: Introduction to Information Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture PPT/lec1_09_05.pptx)**  
+- **[Lecture 1: Introduction to Information Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/94a490b529f52f26e13728bea51c890d8c394f54/Lecture%20PPT/lec1_09_05.pptx)**  
 - **[Lecture 2: Data Types and Visualization Techniques](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lectures/lec2_09_12.pptx)**  
 - **[Lecture 3: Visual Perception](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lectures/lec3_09_19.pdf)**  
 - **[Lecture 4: Visual Encoding](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lectures/lec4_09_26.pdf)**  
