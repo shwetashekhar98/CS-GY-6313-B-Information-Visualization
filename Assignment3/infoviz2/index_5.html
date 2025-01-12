@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Risk and Return Simulator</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #ffa726;
+            font-size: 2.5em;
+        }
+        #chart-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.7);
+        }
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #777;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+            pointer-events: none;
+        }
+        #controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #risk-slider {
+            margin: 20px;
+        }
+        .point {
+            fill: #ffa726;
+            stroke: #e0e0e0;
+            stroke-width: 1.5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Risk and Return Simulator</h1>
+    <div id="chart-container"><div id="chart"></div></div>
+    <div id="controls">
+        <label for="stock-selector">Select Stocks:</label>
+        <select id="stock-selector" multiple>
+            <option value="AAPL">AAPL</option>
+            <option value="MSFT">MSFT</option>
+            <option value="GOOGL">GOOGL</option>
+            <option value="AMZN">AMZN</option>
+            <option value="META">META</option>
+            <option value="TSLA">TSLA</option>
+            <option value="NVDA">NVDA</option>
+            <option value="BRK-B">BRK-B</option>
+            <option value="JNJ">JNJ</option>
+            <option value="V">V</option>
+        </select>
+        <br><br>
+        <label for="risk-slider">Adjust Risk Tolerance:</label>
+        <input type="range" id="risk-slider" min="0" max="1" step="0.01" value="0.5">
+    </div>
+    <script>
+        // Set dimensions and margins
+        const margin = { top: 20, right: 30, bottom: 60, left: 80 };
+        const width = 900 - margin.left - margin.right;
+        const height = 500 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Create scales
+        const xScale = d3.scaleLinear().range([0, width]); // Risk
+        const yScale = d3.scaleLinear().range([height, 0]); // Return
+
+        // Create axes
+        const xAxis = d3.axisBottom(xScale).tickFormat(d => `${(d * 100).toFixed(1)}%`);
+        const yAxis = d3.axisLeft(yScale).tickFormat(d => `${(d * 100).toFixed(1)}%`);
+
+        svg.append("g")
+            .attr("class", "x-axis")
+            .attr("transform", `translate(0,${height})`)
+            .append("text")
+            .attr("class", "axis-label")
+            .attr("x", width / 2)
+            .attr("y", 40)
+            .attr("fill", "#e0e0e0")
+            .style("text-anchor", "middle")
+            .text("Risk (%)");
+
+        svg.append("g")
+            .attr("class", "y-axis")
+            .append("text")
+            .attr("class", "axis-label")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -50)
+            .attr("fill", "#e0e0e0")
+            .style("text-anchor", "middle")
+            .text("Return (%)");
+
+        // Tooltip setup
+        const tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+        // Data storage for selected stocks
+        let selectedStocks = [];
+        let stockData = [];
+
+        // Load mock data (replace with actual API calls in production)
+        async function loadStockData() {
+            // Mock data for risk and return
+            stockData = [
+                { ticker: "AAPL", risk: 0.2, return: 0.15 },
+                { ticker: "MSFT", risk: 0.25, return: 0.18 },
+                { ticker: "GOOGL", risk: 0.3, return: 0.2 },
+                { ticker: "AMZN", risk: 0.35, return: 0.25 },
+                { ticker: "META", risk: 0.4, return: 0.3 },
+                { ticker: "TSLA", risk: 0.5, return: 0.35 },
+                { ticker: "NVDA", risk: 0.45, return: 0.32 },
+                { ticker: "BRK-B", risk: 0.15, return: 0.1 },
+                { ticker: "JNJ", risk: 0.1, return: 0.08 },
+                { ticker: "V", risk: 0.18, return: 0.12 }
+            ];
+
+            xScale.domain([0, d3.max(stockData, d => d.risk) * 1.1]);
+            yScale.domain([0, d3.max(stockData, d => d.return) * 1.1]);
+
+            svg.select(".x-axis").call(xAxis);
+            svg.select(".y-axis").call(yAxis);
+        }
+
+        loadStockData();
+
+        function updateChart() {
+            // Filter data for selected stocks
+            const currentData = stockData.filter(d => selectedStocks.includes(d.ticker));
+
+            // Create scatter plot for each selected stock
+            let points = svg.selectAll(".stock-point").data(currentData, d => d.ticker);
+
+            // Enter new points
+            points.enter()
+                .append("circle")
+                .attr("class", "stock-point")
+                .attr("cx", d => xScale(d.risk))
+                .attr("cy", d => yScale(d.return))
+                .attr("r", 0)
+                .attr("fill", "#42a5f5")
+                .attr("stroke", "#e0e0e0")
+                .attr("stroke-width", 1.5)
+                .on("mouseover", function(event, d) {
+                    tooltip.transition().duration(200).style("opacity", 0.9);
+                    tooltip.html(`<strong>${d.ticker}</strong><br>Risk: ${(d.risk * 100).toFixed(1)}%<br>Return: ${(d.return * 100).toFixed(1)}%`)
+                        .style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 30) + "px");
+                })
+                .on("mouseout", function() {
+                    tooltip.transition().duration(500).style("opacity", 0);
+                })
+                .transition()
+                .duration(1000)
+                .attr("r", 8);
+
+            // Update existing points
+            points.transition()
+                .duration(1000)
+                .attr("cx", d => xScale(d.risk))
+                .attr("cy", d => yScale(d.return));
+
+            // Remove old points
+            points.exit()
+                .transition()
+                .duration(1000)
+                .attr("r", 0)
+                .remove();
+
+            // Calculate portfolio risk and return
+            if (currentData.length > 0) {
+                const riskTolerance = +d3.select("#risk-slider").property("value");
+                const totalRisk = d3.mean(currentData, d => d.risk) * riskTolerance;
+                const totalReturn = d3.mean(currentData, d => d.return) * (1 + (riskTolerance - 0.5));
+
+                // Update the scatter plot point for portfolio
+                let portfolioPoint = svg.selectAll(".portfolio-point").data([{ risk: totalRisk, return: totalReturn, tag: 'Portfolio' }]);
+
+                portfolioPoint.enter()
+                    .append("circle")
+                    .attr("class", "portfolio-point")
+                    .attr("data-value", d => `Risk: ${(d.risk * 100).toFixed(1)}%, Return: ${(d.return * 100).toFixed(1)}%`)
+                    .attr("data-tag", d => d.tag)
+                    .attr("cx", d => xScale(d.risk))
+                    .attr("cy", d => yScale(d.return))
+                    .attr("r", 0)
+                    .attr("fill", "#ffa726")
+                    .transition()
+                    .duration(1000)
+                    .attr("r", 10);
+
+                portfolioPoint.transition()
+                    .duration(1000)
+                    .attr("cx", d => xScale(d.risk))
+                    .attr("cy", d => yScale(d.return));
+
+                portfolioPoint.exit()
+                    .transition()
+                    .duration(1000)
+                    .attr("r", 0)
+                    .remove();
+            }
+        }
+
+        // Event listeners
+        d3.select("#stock-selector").on("change", function() {
+            selectedStocks = Array.from(this.selectedOptions).map(option => option.value);
+            updateChart();
+        });
+
+        d3.select("#risk-slider").on("input", function() {
+            updateChart();
+        });
+    </script>
+</body>
+</html>
+
