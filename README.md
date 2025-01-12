@@ -37,7 +37,8 @@ Lecture notes provide theoretical foundations and practical tips for creating ef
 - **[Lecture 10: Storytelling in Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec10_11_13_misinfo_storytelling_user_study%20-%20Copy_choladeck%20(wecompress.com).pptx)**  
 - **[Lecture 11: Future Topics in Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec11_11_21_future_topics_research_choladeck%20(wecompress.com).pptx
 )**  
-- **[Guest Lecture: Immersive Analytics](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec12_Immersive_Analytics.pdf)**  
+- **[Guest Lecture: Immersive Analytics](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec12_Immersive%20Analytics%20-%20NYU%20Guest%20Lecture%2004_12_2024.pdf
+)**  
 
 ---
 
