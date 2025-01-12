@@ -9,16 +9,16 @@ This repository contains coursework, solutions, and lecture materials for **CS-G
 ### **Assignments**
 Each assignment folder includes a PDF with the problem statement and relevant solutions. Assignments focus on practical applications of visualization principles.
 
-- **[Assignment 1: Expository Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Assignments/Assignment%201.pdf)**  
+- **[Assignment 1: Expository Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Assignment1)**  
   - Focus: Static visualizations for clear communication.  
 
-- **[Assignment 2: Misleading Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Assignments/Assignment%202.pdf)**  
+- **[Assignment 2: Misleading Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Assignment2)**  
   - Focus: Designing earnest and deceptive visualizations.  
 
-- **[Assignment 3: Interactive Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Assignments/Assignment%203.pdf)**  
+- **[Assignment 3: Interactive Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Assignment3)**  
   - Focus: Dynamic and user-interactive visualizations.  
 
-- **[Assignment 4: Advocacy Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Assignments/Assignment%204.pdf)**  
+- **[Assignment 4: Advocacy Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Assignment4)**  
   - Focus: Storytelling and persuasive visualizations for social change.  
 
 ### **Solutions**
