@@ -27,13 +27,13 @@ Lecture notes provide theoretical foundations and practical tips for creating ef
 
 - **[Lecture 1: Introduction to Information Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec1_09_05.pptx)**  
 - **[Lecture 2: Data Types and Visualization Techniques](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec2_09_12.pptx)**  
-- **[Lecture 3: Visual Perception](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec3_09_19.pdf)**  
-- **[Lecture 4: Visual Encoding](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec4_09_26.pdf)**  
-- **[Lecture 5: Spatial Data Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec5_10_03.pdf)**  
-- **[Lecture 6: Network Data Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec6_10_10.pdf)**  
-- **[Lecture 7: Time-based Visualizations](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec7_10_17.pdf)**  
-- **[Lecture 8: Interaction and Animation](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec8_10_24.pdf)**  
-- **[Lecture 9: Uncertainty and Misinformation](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec9_10_31.pdf)**  
+- **[Lecture 3: Visual Perception](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec3_09_19_visual_perception-compressed.pdf)**  
+- **[Lecture 4: Visual Encoding](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec4_09_26_visual_encoding-compressed.pdf)**  
+- **[Lecture 5: Spatial Data Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec5_10_03_spatial_data-Copy(2)-compressed.pdf)**  
+- **[Lecture 6: Network Data Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec6_10_10_networks-compressed.pdf)**  
+- **[Lecture 7: Time-based Visualizations](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec7_10_17_time-compressed.pdf)**  
+- **[Lecture 8: Interaction and Animation](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec8_10_24_interaction_and_animation-compressed.pdf)**  
+- **[Lecture 9: Uncertainty and Misinformation](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec9_10_31_uncertainity_misinfo1-compressed.pdf)**  
 - **[Lecture 10: Storytelling in Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec10_11_13.pptx)**  
 - **[Lecture 11: Future Topics in Visualization](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec11_11_21.pptx)**  
 - **[Guest Lecture: Immersive Analytics](https://github.com/shwetashekhar98/CS-GY-6313-B-Information-Visualization/blob/main/Lecture%20PPT/lec12_Immersive_Analytics.pdf)**  
